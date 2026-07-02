@@ -1,3 +1,5 @@
+// Write a program to check if an entered key exists in the key-value pair array or not and print 'True' , if key exists otherwise print 'False'. 
+
 #include <stdio.h>
 #include <stdlib.h>
 struct node
