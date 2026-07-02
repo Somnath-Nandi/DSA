@@ -1,3 +1,5 @@
+// Write a program to remove an entry of entered key name from a key-value pair and print the remaining key-value pair. The output format should be required as  {2: 66, 3: 45} 
+
 import java.util.HashMap;
 import java.util.Scanner;
 
