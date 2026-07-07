@@ -46,29 +46,30 @@ public class Balanced_Parentheses {
         Scanner sc = new Scanner(System.in);
         String input = sc.next();
         boolean balanced = true;
-        if(input.isEmpty())
+        if (input.isEmpty())
             balanced = true;
         else {
-        for(int i=0;i<input.length();i++) {
-            char ch = input.charAt(i);
-            
-            if(ch == '(' || ch == '{' || ch=='[')
-                push(ch);
-            else if(top!=-1 && ch == ')'&&stack[top]=='(')
-                pop();
-            else if(top!=-1 && ch=='}' &&stack[top]=='{')
-                pop();
-            else if(top!=-1 && ch==']' && stack[top]=='[')
-                pop();
-            else {
-                balanced = false;
-                break;
+            for (int i = 0; i < input.length(); i++) {
+                char ch = input.charAt(i);
+
+                if (ch == '(' || ch == '{' || ch == '[')
+                    push(ch);
+                else if (top != -1 && ch == ')' && stack[top] == '(')
+                    pop();
+                else if (top != -1 && ch == '}' && stack[top] == '{')
+                    pop();
+                else if (top != -1 && ch == ']' && stack[top] == '[')
+                    pop();
+                else {
+                    balanced = false;
+                    break;
+                }
             }
+            if (top != -1)
+                balanced = false;
+
+            System.out.println(balanced);
+
         }
-        if(top != -1)
-            balanced = false;
-        
-        System.out.println(balanced);
-            
     }
 }
