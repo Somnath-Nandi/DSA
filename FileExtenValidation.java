@@ -23,6 +23,6 @@ public class FileExtenValidation {
         Scanner s = new Scanner(System.in);
         String fileName = s.nextLine();
         System.out.println(validateFileExtn(fileName));
-
+        s.close();
     }
 }
